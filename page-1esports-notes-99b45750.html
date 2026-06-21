@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一竞技 · 信息与资料索引</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9f7f4;
+      color: #1e1e1e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      padding: 2.5rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 640px;
+      width: 100%;
+    }
+
+    /* typography */
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 0 0 0.1rem 0;
+      color: #2a2a2a;
+    }
+
+    .subhead {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 2.8rem;
+      border-bottom: 1px solid #e5e2dd;
+      padding-bottom: 1.2rem;
+      font-weight: 350;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 450;
+      margin: 2.6rem 0 0.8rem 0;
+      color: #333;
+      letter-spacing: 0.01em;
+      border-left: 3px solid #b3a99a;
+      padding-left: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 1.8rem 0 0.4rem 0;
+      color: #3f3f3f;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      color: #3a3a3a;
+    }
+
+    a {
+      color: #6b5f4e;
+      text-decoration: none;
+      border-bottom: 1px solid #d5cec2;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #2e2a24;
+      border-bottom-color: #2e2a24;
+    }
+
+    /* card-like block for highlights */
+    .highlight-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    .highlight-item {
+      background: #ffffffef;
+      border: 1px solid #e5e0d9;
+      border-radius: 0;
+      padding: 1.2rem 1.2rem 1rem 1.2rem;
+      flex: 1 1 160px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+      transition: box-shadow 0.15s;
+    }
+
+    .highlight-item:hover {
+      box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+    }
+
+    .highlight-item .num {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #b3a99a;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .highlight-item h4 {
+      font-weight: 450;
+      font-size: 1rem;
+      margin: 0.2rem 0 0.3rem 0;
+      color: #2e2a24;
+    }
+
+    .highlight-item p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* use-case list */
+    .scenario-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.2rem 0 1rem 0;
+    }
+
+    .scenario-list li {
+      padding: 0.6rem 0 0.6rem 1.2rem;
+      border-bottom: 1px dashed #eae5de;
+      position: relative;
+      font-size: 0.96rem;
+      color: #383838;
+    }
+
+    .scenario-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #b3a99a;
+    }
+
+    .note-box {
+      background: #f2efe9;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0 2.2rem 0;
+      border-left: 3px solid #c6bbab;
+      font-size: 0.95rem;
+      color: #3b3b3b;
+    }
+
+    .faq-summary {
+      margin: 2.6rem 0 1.2rem 0;
+    }
+
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #ece7e1;
+    }
+
+    .faq-item strong {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.15rem;
+      color: #2e2a24;
+    }
+
+    .faq-item p {
+      margin: 0.2rem 0 0 0;
+      font-size: 0.93rem;
+      color: #555;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e2dd;
+      margin: 2.8rem 0 1.2rem 0;
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: #9c9488;
+      letter-spacing: 0.02em;
+      margin-top: 3rem;
+    }
+
+    /* responsive */
+    @media (max-width: 500px) {
+      body { padding: 1.8rem 0.8rem; }
+      h1 { font-size: 2rem; }
+      .highlight-grid { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <h1>一竞技</h1>
+  <div class="subhead">信息整理 · 资料索引 · 产品说明</div>
+
+  <p>
+    在资讯与数据不断流动的日常里，快速找到可靠的信息入口本身就是一门手艺。<a href="https://page-1esports.com">一竞技</a>作为围绕特定兴趣领域的内容聚合站点，试图将分散的片段整理成可翻阅的索引。这里没有嘈杂的推送，重点是把资料本身放在前面——从赛事档案、战队的简要历程，到版本变动记录，都按相对安静的节奏呈现。
+  </p>
+
+  <h2>几个值得留意的特点</h2>
+  <div class="highlight-grid">
+    <div class="highlight-item">
+      <div class="num">01</div>
+      <h4>编年式存档</h4>
+      <p>按时间线整理关键事件，方便回溯某个阶段的队伍调整或重要对局。</p>
+    </div>
+    <div class="highlight-item">
+      <div class="num">02</div>
+      <h4>低干扰阅读</h4>
+      <p>页面结构以文本为主，减少弹窗、横幅与自动播放，更适合专注翻阅。</p>
+    </div>
+    <div class="highlight-item">
+      <div class="num">03</div>
+      <h4>索引式导航</h4>
+      <p>通过标签与分类目录组织内容，更像是资料库的目录页。</p>
+    </div>
+  </div>
+
+  <h2>适合放在哪些场景里使用</h2>
+  <ul class="scenario-list">
+    <li>做赛前背景调查时，快速查阅两支队伍过往的交手记录与阵容变化。</li>
+    <li>想回顾某个赛季的版本改动或重要补丁说明，可以按时间线逐条浏览。</li>
+    <li>整理个人观赛笔记时，把 <a href="https://page-1esports.com">一竞技</a> 上的公开数据当作参考锚点，方便交叉核对。</li>
+    <li>纯粹想找个安静的地方翻翻旧比赛档案，不被打扰地看文字记录。</li>
+  </ul>
+
+  <h2>一点使用上的提醒</h2>
+  <div class="note-box">
+    <strong>关于资料范围</strong> — 站内收录的信息主要来自公开赛事与社区记录，更新节奏不以实时播报为目标。如果你是寻找秒级比分或直播流，这里可能不太合适。它更适合做“赛后可翻阅的参考”，而非即时工具。另外，所有数据均标注了来源或时间，建议按需交叉验证。
+  </div>
+
+  <div class="faq-summary">
+    <h2>几个常被问到的点</h2>
+    <div class="faq-item">
+      <strong>是否需要注册才能浏览？</strong>
+      <p>目前绝大部分存档页面都可以直接查看，不需要登录。部分交互功能（如收藏标签）可能需要简单注册，但阅读本身没有门槛。</p>
+    </div>
+    <div class="faq-item">
+      <strong>内容更新频率大概是多久？</strong>
+      <p>大型赛事结束后通常会在 24～72 小时内更新战报与统计；日常的战队变动、版本补丁则视信息确认速度而定，没有固定周期。</p>
+    </div>
+    <div class="faq-item">
+      <strong>能否转载或引用站内资料？</strong>
+      <p>引用少量文本或数据时建议注明出处（来自 <a href="https://page-1esports.com">一竞技</a>）。整份复制或用于商业用途前，最好先参考站内的版权说明页。</p>
+    </div>
+  </div>
+
+  <hr>
+  <div class="footer-note">
+    页面内容仅供信息参考 · 不构成任何建议或承诺
+  </div>
+</div>
+</body>
+</html>
